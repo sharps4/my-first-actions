@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/sharps4/my-first-actions#readme",
   "devDependencies": {
+    "coveralls": "^3.1.1",
     "jest": "^29.7.0"
   }
 }
