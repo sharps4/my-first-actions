@@ -2,11 +2,17 @@ name: CI Simple Workflow
 
 on:
   push:
-    branches: [ main ] 
+    branches: [ main ]
+
+env:
+  MY_VARIABLE: "This is a variable"
 
 jobs:
-  say_hello:
+  say_hello_and_variable: 
     runs-on: ubuntu-latest
     steps:
       - name: Print Hello Message
         run: echo "Hello, GitHub Actions !"
+
+      - name: Display Environment Variable
+        run: echo "The value of MY_VARIABLE is: ${{ env.MY_VARIABLE }}"
