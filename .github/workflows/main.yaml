@@ -28,3 +28,9 @@ jobs:
 
       - name: Display content of hello.txt
         run: cat hello.txt
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm test
