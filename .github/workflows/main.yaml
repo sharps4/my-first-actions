@@ -8,8 +8,8 @@ env:
   MY_VARIABLE: "This is a variable"
 
 jobs:
-  say_hello_and_secrets: 
-    name: Say Hello, Display Variable and Display Secrets
+  bash_script_job: 
+    name: Run Bash Script
     runs-on: ubuntu-latest
     steps:
       - name: Print Hello Message
@@ -20,3 +20,11 @@ jobs:
 
       - name: Display Secret
         run: echo "Attempting to display MY_SECRET ${{ secrets.MY_SECRET }}"
+
+      - name: Create a file with Bash
+        run: | 
+          echo "Hello world" > hello.txt
+          echo "File hello.txt created."
+
+      - name: Display content of hello.txt
+        run: cat hello.txt
