@@ -54,5 +54,5 @@ jobs:
             
       steps:
       
-        - name: Announce second job
+        - name: Announce second job 
           run: echo "Second job running because build_and_test succeeded!"
