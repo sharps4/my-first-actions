@@ -3,6 +3,8 @@ name: CI Simple Workflow
 on:
   push:
     branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
 env:
   MY_VARIABLE: "This is a variable"
@@ -49,6 +51,12 @@ jobs:
         run: npm run coveralls
         env:
           COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
+
+      - name: Eslint DL
+        run : npm install --save-dev eslint
+          
+      - name: Action ESLint
+        uses: sibiraj-s/action-eslint@v3.0.1
   
   second_job:
       name: Second Job
