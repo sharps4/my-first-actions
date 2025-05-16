@@ -9,8 +9,7 @@ env:
   MY_VARIABLE: "This is a variable"
 
 jobs:
-  say_hello_and_variable:
-    runs-on: ubuntu-latest
+  say_hello_and_variable: runs-on: ubuntu-latest
     steps:
       - name: Print Hello Message
         run: echo "Hello, GitHub Actions!"
