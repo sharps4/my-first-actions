@@ -14,5 +14,7 @@ jobs:
       - name: Print Hello Message
         run: echo "Hello, GitHub Actions !"
 
-      - name: Display Environment Variable
-        run: echo "The value of MY_VARIABLE is: ${{ env.MY_VARIABLE }}"
+        env:
+          - name: Display Environment Variable
+            MY_STEP_VARIABLE: "This is specific to this step"
+            run: echo "Step var: ${{ env.MY_STEP_VARIABLE }}"
